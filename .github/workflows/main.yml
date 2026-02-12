@@ -37,7 +37,7 @@ jobs:
 
       # ✅ Force headless in CI (no X server on runners)
       - name: Run tests (headless)
-        run: mvn -B -e test -Dheadless=true
+        run: mvn -B -e test -Dheadless=true -DbaseUrl=https://demo.spreecommerce.org
 
       - name: Upload Surefire reports
         if: always()

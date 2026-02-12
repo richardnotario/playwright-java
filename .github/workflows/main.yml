@@ -35,8 +35,9 @@ jobs:
       - name: Install Playwright browsers + deps
         run: mvn -B -e exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.classpathScope=test -Dexec.args="install --with-deps"
 
-      - name: Run tests
-        run: mvn -B -e test
+      # ✅ Force headless in CI (no X server on runners)
+      - name: Run tests (headless)
+        run: mvn -B -e test -Dheadless=true
 
       - name: Upload Surefire reports
         if: always()

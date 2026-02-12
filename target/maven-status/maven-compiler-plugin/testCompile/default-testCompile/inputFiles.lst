@@ -1,0 +1,15 @@
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/core/AllureFailureExtension.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/core/BaseTest.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/core/TestLifecycleExtension.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/pages/AccountPage.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/pages/AuthPage.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/pages/CartPage.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/pages/HeaderComponent.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/pages/HomePage.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/pages/ProductDetailPage.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/pages/ProductsPage.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/pages/components/CartDrawerComponent.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/pages/components/FlashBannerComponent.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/tests/SpreeE2eCheckoutTest.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/utils/AllureAttachments.java
+/Users/myles/dev/spree-pw-java/src/test/java/com/example/spree/utils/TestData.java

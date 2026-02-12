@@ -1,0 +1,15 @@
+com/example/spree/pages/components/CartDrawerComponent.class
+com/example/spree/pages/CartPage.class
+com/example/spree/pages/HomePage.class
+com/example/spree/pages/HeaderComponent.class
+com/example/spree/core/TestLifecycleExtension.class
+com/example/spree/tests/SpreeE2eCheckoutTest.class
+com/example/spree/core/AllureFailureExtension.class
+com/example/spree/pages/AccountPage.class
+com/example/spree/core/BaseTest.class
+com/example/spree/pages/ProductDetailPage.class
+com/example/spree/pages/components/FlashBannerComponent.class
+com/example/spree/utils/TestData.class
+com/example/spree/pages/AuthPage.class
+com/example/spree/pages/ProductsPage.class
+com/example/spree/utils/AllureAttachments.class

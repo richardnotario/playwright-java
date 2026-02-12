@@ -29,13 +29,16 @@ jobs:
           java-version: "17"
           cache: maven
 
-      # Build first to download deps faster
-      - name: Maven build (skip tests)
-        run: mvn -B clean package -DskipTests
+      # Resolve deps (including test-scope) without running tests
+      - name: Maven build (test-compile, skip tests)
+        run: mvn -B clean test-compile -DskipTests
 
-      # Install Playwright browsers + OS deps via Playwright CLI (NOT a Maven plugin)
+      # Install Playwright browsers + OS deps using Playwright CLI from TEST classpath
       - name: Install Playwright browsers + deps
-        run: mvn -B exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
+        run: mvn -B -e exec:java \
+          -Dexec.mainClass=com.microsoft.playwright.CLI \
+          -Dexec.classpathScope=test \
+          -Dexec.args="install --with-deps"
 
       # Run tests with stack traces in logs
       - name: Run tests

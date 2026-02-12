@@ -29,22 +29,15 @@ jobs:
           java-version: "17"
           cache: maven
 
-      # Resolve deps (including test-scope) without running tests
       - name: Maven build (test-compile, skip tests)
         run: mvn -B clean test-compile -DskipTests
 
-      # Install Playwright browsers + OS deps using Playwright CLI from TEST classpath
       - name: Install Playwright browsers + deps
-        run: mvn -B -e exec:java \
-          -Dexec.mainClass=com.microsoft.playwright.CLI \
-          -Dexec.classpathScope=test \
-          -Dexec.args="install --with-deps"
+        run: mvn -B -e exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.classpathScope=test -Dexec.args="install --with-deps"
 
-      # Run tests with stack traces in logs
       - name: Run tests
         run: mvn -B -e test
 
-      # Always upload useful artifacts
       - name: Upload Surefire reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -60,7 +53,6 @@ jobs:
           path: target/allure-results/
           if-no-files-found: warn
 
-      # Install Allure CLI (pinned)
       - name: Install Allure CLI
         if: always()
         run: |
@@ -73,7 +65,6 @@ jobs:
           sudo ln -sf /opt/allure/bin/allure /usr/local/bin/allure
           allure --version
 
-      # Generate Allure report even if tests failed
       - name: Generate Allure report
         if: always()
         run: |
